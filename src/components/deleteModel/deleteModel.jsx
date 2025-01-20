@@ -19,7 +19,7 @@ const DeleteModel = ({ data, onClose }) => {
 
         try {
 
-            const response = await axios.delete(`http://localhost:5000/api/url/url-delete/${data?.shortURL}`,
+            const response = await axios.delete(`https://brm-server-a9fe47f057bd.herokuapp.com/api/url/url-delete/${data?.shortURL}`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`

@@ -49,7 +49,7 @@ const useEditURLModel = (initialData) => {
 
             try {
                 const response = await axios.put(
-                    'http://localhost:5000/api/url/url-update',
+                    'https://brm-server-a9fe47f057bd.herokuapp.com/api/url/url-update',
                     payload,
                     {
                         headers: {

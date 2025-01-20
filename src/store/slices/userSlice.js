@@ -7,7 +7,7 @@ export const fetchUserProfile = createAsyncThunk(
     'user/fetchUserProfile',
     async (_, { rejectWithValue }) => {
         try {
-            const response = await fetch('http://localhost:5000/api/user/profile', {
+            const response = await fetch('https://brm-server-a9fe47f057bd.herokuapp.com/api/user/profile', {
                 headers: {
                     Authorization: `Bearer ${Cookies.get('authToken')}`,
                 },
