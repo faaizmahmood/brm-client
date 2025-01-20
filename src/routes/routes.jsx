@@ -58,7 +58,7 @@ function AppRoutes() {
                         path="/hrm"
                         element={
                             <ProtectedRoutes allowedRoles={['admin', 'user']}>
-                                <h1>HRM</h1>
+                                <h1>HRM Page is here</h1>
                             </ProtectedRoutes>
                         }
                     />
@@ -67,7 +67,7 @@ function AppRoutes() {
                         path="/stock-management"
                         element={
                             <ProtectedRoutes allowedRoles={['admin', 'user']}>
-                                <h1>stock-management</h1>
+                                <h1>stock-management is page is here</h1>
                             </ProtectedRoutes>
                         }
                     />
@@ -76,7 +76,7 @@ function AppRoutes() {
                         path="/projects-management"
                         element={
                             <ProtectedRoutes allowedRoles={['admin', 'user']}>
-                                <h1>projects-management</h1>
+                                <h1>projects-management is here</h1>
                             </ProtectedRoutes>
                         }
                     />
@@ -85,7 +85,7 @@ function AppRoutes() {
                         path="/assets-management"
                         element={
                             <ProtectedRoutes allowedRoles={['admin', 'user']}>
-                                <h1>assets-management"</h1>
+                                <h1>assets-management page is here</h1>
                             </ProtectedRoutes>
                         }
                     />
@@ -94,7 +94,7 @@ function AppRoutes() {
                         path="/finance-management"
                         element={
                             <ProtectedRoutes allowedRoles={['admin', 'user']}>
-                                <h1>finance-management</h1>
+                                <h1>finance-management page is here</h1>
                             </ProtectedRoutes>
                         }
                     />

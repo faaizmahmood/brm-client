@@ -15,7 +15,7 @@ const Dashboard = () => {
 
 
             <section className={`${styles.dashboard}`}>
-                <h1>Dashboard</h1>
+                <h1>Dashboard page is here</h1>
             </section>
 
 

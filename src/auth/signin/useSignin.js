@@ -62,7 +62,7 @@ const useSignin = () => {
 
                 formik.resetForm()
 
-                window.location.reload()
+                navigate('/')
 
             } catch (error) {
                 // Display error toast based on the error type
