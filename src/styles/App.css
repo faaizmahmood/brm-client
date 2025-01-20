@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+/* App.css or custom styles */
+
+/* Sidebar Container */
+/* Main Content */
+.main-content {
+  padding-top: 20px;
+  padding-left: 20px;
+  padding: 20px;
+  transition: margin-left 0.3s ease;
+  /* Smooth transition */
+}
+
+/* Sidebar Container */
+.sidebar-container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  z-index: 100;
+  transition: width 0.3s ease-in-out;
+  /* Smooth transition for width */
+  background-color: #f8f9fa;
+}
+
+/* Sidebar Header */
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #343a40;
+  color: white;
+}
+
+.sidebar-toggle {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+}
+
+/* Sidebar Collapsed */
+.pro-sidebar.collapsed .sidebar-container {
+  width: 80px;
+  /* Collapsed sidebar width */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .sidebar-container {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  .main-content {
+    margin-left: 0;
+    /* Reset for small screens */
+  }
+}
