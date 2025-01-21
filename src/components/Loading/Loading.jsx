@@ -11,7 +11,7 @@ const Loading = () => {
             <h4 className='mb-3'>
             Biz Resource Management - BRM
             </h4>
-            <ScaleLoader color="#0000ff" />
+            <ScaleLoader color="#FF9933" />
         </div>
     );
 };

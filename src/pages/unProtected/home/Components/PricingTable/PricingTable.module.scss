@@ -1,0 +1,104 @@
+.pricingTable {
+    padding: 80px 0px;
+    background-color: #FAFAFC;
+    
+}
+
+.card {
+    max-width: calc(100% / 3 - 20px);
+    min-width: 300px;
+    min-height: 380px;
+    background-color: #fff;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+        transform: scale(1.02);
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    &:nth-child(2){
+        transform: scale(1.05);
+    }
+
+    h3 {
+        margin: 40px 0 10px;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+
+    h5 {
+        color: grey;
+        margin-bottom: 20px;
+
+        span {
+            font-size: 30px;
+            color: #FF9933;
+        }
+    }
+
+    p {
+        color: gray;
+        margin-bottom: 15px;
+
+        span {
+            font-weight: bold;
+        }
+    }
+
+    button {
+        margin-top: 10px;
+        border-radius: 20px;
+        cursor: pointer;
+        font-size: 1rem;
+        padding: 5px 20px;
+        background-color: #FF9933;
+        border: none;
+        outline: none;
+        border-radius: 5px;
+        color: white;
+
+        &:hover {
+            background-color: #FF9933;
+            transform: scale(1.05);
+            transition: all 0.3s ease;
+        }
+    }
+}
+
+.popularBadge {
+    position: absolute;
+    background-color: #FF9933;
+    color: white;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px 20px;
+    font-size: 0.8em;
+    font-weight: bold;
+    border-radius: 10px;
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        transform: rotate(45deg);
+        border: 10px solid #FF9933;
+    }
+
+    &::before {
+        border-top-color: transparent;
+        border-right-color: transparent;
+        left: -10px;
+    }
+
+    &::after {
+        border-left-color: transparent;
+        border-bottom-color: transparent;
+        right: -10px;
+    }
+}

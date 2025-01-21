@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -15,8 +17,10 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+p {
   margin: 0;
+  font-family: "Asap", serif;
 }
 
 /* App.css or custom styles */
@@ -78,5 +82,58 @@ h6 {
   .main-content {
     margin-left: 0;
     /* Reset for small screens */
+  }
+}
+
+
+.accordion-button:not(.collapsed){
+  color: black;
+  border-radius: 5px !important;
+
+}
+
+.accordion {
+
+  .accordion-item {
+    background: #fff;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    .accordion-header {
+      .accordion-button {
+        background-color: #ff993350;
+        color: #333;
+        font-size: 1.2rem;
+        font-weight: bold;
+        padding: 1rem;
+        border: none;
+        border-radius: 5px !important;
+
+        &:focus {
+          box-shadow: none;
+        }
+
+        &:not(.collapsed) {
+          background-color: #ff993350;
+          color: #333;
+        }
+
+        i {
+          font-size: 1.3rem;
+          color: #FF9933;
+        }
+      }
+    }
+
+    .accordion-body {
+      background-color: #f9f9f9;
+      color: #555;
+      font-size: 1rem;
+      line-height: 1.6;
+      border-radius: 0 0 10px 10px;
+    }
   }
 }

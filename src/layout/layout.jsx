@@ -106,8 +106,6 @@ const Layout = () => {
                 {/* Routes */}
                 <AppRoutes />
 
-                {/* Footer */}
-                {shouldShowHeaderFooter && isLoggedIn && <Footer />}
             </div>
         </>
     );

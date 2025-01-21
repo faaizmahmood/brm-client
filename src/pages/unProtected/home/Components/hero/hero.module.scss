@@ -1,0 +1,53 @@
+// HeroSection.scss
+
+.hero {
+
+
+    .hero_section {
+        background: none;
+        background-size: cover;
+        height: 65vh;
+        color: #252A37;
+
+        .hero_title {
+            font-size: 2.5rem;
+            font-weight: bold;
+
+            @media (min-width: 768px) {
+                font-size: 3.5rem;
+            }
+        }
+
+        .hero_subtitle {
+            font-size: 1.1rem;
+            margin-top: 10px;
+
+            @media (max-width: 768px) {
+                font-size: 0.6rem;
+            }
+        }
+
+        .btn {
+            padding: 5px 20px;
+            background-color: #FF9933;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            color: white;
+
+            @media (min-width: 768px) {
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+
+    .mockupImage {
+        text-align: center;
+
+        img {
+            width: 80%;
+        }
+
+    }
+}

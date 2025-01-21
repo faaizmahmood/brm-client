@@ -1,7 +1,11 @@
 .header {
 
-    background-color: #BEE2E2;
+    // background-color: #BEE2E2;
     padding: 15px;
+
+    img{
+        width: 100px;
+    }
 
     a{
         text-decoration: none;
@@ -78,7 +82,7 @@
 
         button {
             padding: 5px 20px;
-            background-color: rgb(51, 0, 255);
+            background-color: #FF9933;
             border: none;
             outline: none;
             border-radius: 5px;
@@ -87,8 +91,8 @@
 
         .child_2{
             background-color: transparent !important;
-            border: 1px solid blue !important;
-            color: blue !important;
+            border: 1px solid #FF9933 !important;
+            color: #FF9933 !important;
         }
     }
 

@@ -26,7 +26,7 @@ const Header = () => {
         <div className='row align-items-center'>
           <div className='col-4'>
             
-            <NavLink to="/"><h4>BRM</h4></NavLink>
+            <NavLink to="/"><img src='../../../../public/images/big-tools-logo.png'/></NavLink>
           </div>
           <div className='col-4'>
             {/* <nav>
