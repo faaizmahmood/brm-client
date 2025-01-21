@@ -1,7 +1,7 @@
 // HeroSection.jsx
-import React from "react";
 import styles from "./hero.module.scss";
 import { NavLink } from "react-router-dom";
+import mockUp from '../../../../../../public/images/mock-up-img.png'
 
 const HeroSection = () => {
     return (
@@ -22,7 +22,7 @@ const HeroSection = () => {
 
 
                 <div className={`${styles.mockupImage} container`}>
-                    <img src="../../../../../../public/images/mock-up-img.png" />
+                    <img src={mockUp} />
                 </div>
 
             </section>

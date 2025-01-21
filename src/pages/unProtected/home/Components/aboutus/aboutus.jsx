@@ -1,5 +1,6 @@
 // AboutUs.jsx
 import styles from "./aboutus.module.scss";
+import aboutImg from '../../../../../../public/images/about_us.png'
 
 const AboutUs = () => {
     return (
@@ -29,7 +30,7 @@ const AboutUs = () => {
                     </div>
                     <div className="col-md-5 text-center">
                         <img
-                            src="../../../../../../public/images/about_us.png"
+                            src={aboutImg}
                             alt="About Us"
                             className={styles.aboutUsImage}
                         />

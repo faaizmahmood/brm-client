@@ -3,6 +3,7 @@ import React from "react";
 import styles from "./Footer.module.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { NavLink } from "react-router-dom";
+import logo from '../../../../public/images/big-tools-logo.png'
 
 const Footer = () => {
   return (
@@ -72,7 +73,7 @@ const Footer = () => {
 
             <div className="col-md-3 text-md-start text-center">
 
-              <NavLink to="/"><img src='../../../../public/images/big-tools-logo.png' /></NavLink>
+              <NavLink to="/"><img src={logo} /></NavLink>
             </div>
 
             <div className="col-md-6 px-3 my-md-0 my-4">

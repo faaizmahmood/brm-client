@@ -5,6 +5,8 @@ import { useSelector } from 'react-redux'
 import { NavLink, useNavigate } from 'react-router-dom'
 import Cookies from 'js-cookie';
 
+import logo from '../../../../public/images/big-tools-logo.png'
+
 const Header = () => {
   const { profile } = useSelector((state) => state.user)
   const [dropdownVisible, setDropdownVisible] = useState(false)
@@ -26,7 +28,7 @@ const Header = () => {
         <div className='row align-items-center'>
           <div className='col-4'>
             
-            <NavLink to="/"><img src='../../../../public/images/big-tools-logo.png'/></NavLink>
+            <NavLink to="/"><img src={logo}/></NavLink>
           </div>
           <div className='col-4'>
             {/* <nav>
