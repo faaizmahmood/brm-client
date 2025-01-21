@@ -1,5 +1,5 @@
 // KeyFeatures.jsx
-import styles from "./KeyFeatures.module.scss";
+import styles from "./keyFeatures.module.scss";
 
 const KeyFeatures = () => {
   const features = [
