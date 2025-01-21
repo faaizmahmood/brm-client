@@ -63,7 +63,7 @@ const Footer = () => {
         <div className="container">
 
           <div className={`${styles.footerHeading}`}>
-            <h1 className="text-center">Drop us a line or two, we are open for creative minds and collaborations!</h1>
+            <h1 className="text-center">Get in Touch! We&apos;re Here to Support Your Business Journey.</h1>
 
             <button className="mt-3">Get Started</button>
           </div>
