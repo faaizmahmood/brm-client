@@ -8,23 +8,23 @@ const AboutUs = () => {
             <div className="container">
                 <div className="row align-items-center">
                     <div className="col-md-7">
-                        <h2 className={styles.sectionTitle}>Why Choose Biz Resource Management</h2>
+                        <h2 className={styles.sectionTitle}>Why Choose Us?</h2>
                         <p className={styles.sectionDescription}>
-                            BRM is designed to help businesses, from small startups to large corporations, manage their resources effectively.
+                        Empower your financial decisions with accurate insights and advanced analytics.
                         </p>
 
                         <ul className={styles.featuresList}>
                             <li>
-                                <i className="fa-light fa-badge-check"></i> Manage Human Resources
+                                <i className="fa-light fa-badge-check"></i> Get detailed financial summaries and peer comparisons.
                             </li>
                             <li>
-                                <i className="fa-light fa-badge-check"></i> Monitor Stock Levels
+                                <i className="fa-light fa-badge-check"></i> Plan ahead with precise, data-driven projections.
                             </li>
                             <li>
-                                <i className="fa-light fa-badge-check"></i> Track Projects in Real-Time
+                                <i className="fa-light fa-badge-check"></i> Intuitive design for seamless navigation and insights.
                             </li>
                             <li>
-                                <i className="fa-light fa-badge-check"></i> Improve Business Efficiency
+                                <i className="fa-light fa-badge-check"></i> Built for accuracy, security, and performance.
                             </li>
                         </ul>
                     </div>

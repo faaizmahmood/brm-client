@@ -24,7 +24,7 @@ const Footer = () => {
     //       <div className="col-sm-3">
     //         <h5>Services</h5>
     //         <ul className="list-unstyled">
-    //           <li><a href="#">BRM</a></li>
+    //           <li><a href="#">CU Analysis</a></li>
     //           <li><a href="#">Analytics</a></li>
     //         </ul>
     //       </div>
@@ -52,7 +52,7 @@ const Footer = () => {
 
     //     <hr />
     //     <p className="mb-2 text-center">
-    //       &copy; {new Date().getFullYear()} BRM. All rights reserved.
+    //       &copy; {new Date().getFullYear()} CU Analysis. All rights reserved.
     //     </p>
     //   </div>
     // </footer>
@@ -63,7 +63,7 @@ const Footer = () => {
         <div className="container">
 
           <div className={`${styles.footerHeading}`}>
-            <h1 className="text-center">Get in Touch! We&apos;re Here to Support Your Business Journey.</h1>
+            <h1 className="text-center">Empowering Financial Decisions with Data-Driven Insights</h1>
 
             <button className="mt-3">Get Started</button>
           </div>
@@ -73,16 +73,16 @@ const Footer = () => {
 
             <div className="col-md-3 text-md-start text-center">
 
-              <NavLink to="/"><img src={logo} /></NavLink>
+              <NavLink to="/"><h3>CU Analysis</h3></NavLink>
             </div>
 
             <div className="col-md-6 px-3 my-md-0 my-4">
               <nav>
                 <ul className="mt-3">
                   <li><a href="#about">About</a></li>
-                  <li><a href="#features">Features</a></li>
+                  <li><a href="#">Features</a></li>
                   <li><a href="#works">Works</a></li>
-                  <li><a href="#pricinga">Pricing</a></li>
+                  <li><a href="#">Pricing</a></li>
                 </ul>
               </nav>
             </div>

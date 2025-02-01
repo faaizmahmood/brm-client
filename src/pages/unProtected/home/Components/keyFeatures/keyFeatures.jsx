@@ -32,7 +32,7 @@ const KeyFeatures = () => {
   return (
     <div className={styles.keyFeaturesSection} id="features">
       <div className="container">
-        <h2 className={styles.sectionTitle}>Key Features of BRM</h2>
+        <h2 className={styles.sectionTitle}>Key Features of CU Analysis</h2>
         <div className="row">
           {features.map((feature, index) => (
             <div className="col-md-6 col-lg-3" key={index}>

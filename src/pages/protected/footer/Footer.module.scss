@@ -90,7 +90,7 @@ footer {
 
         button {
             padding: 5px 20px;
-            background-color: #FF9933;
+            background-color: #002147;
             border: none;
             outline: none;
             border-radius: 5px;
@@ -102,9 +102,17 @@ footer {
 
     // nav
 
-    img {
-        width: 100px !important;
+    a {
+        text-decoration: none;
+
+
+        h3 {
+            font-size: 22px;
+            color: #002147;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+        }
     }
+
 
     ul {
 

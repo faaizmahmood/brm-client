@@ -11,10 +11,10 @@ const HeroSection = () => {
                 <div className={`${styles.hero_section} d-flex align-items-center`}>
                     <div className="container text-center">
                         <h1 className={`${styles.hero_title}`}>
-                            Empower Your Business with Resource Management
+                        Powerful Financial Insights at Your Fingertips
                         </h1>
                         <p className={`${styles.hero_subtitle}`}>
-                            Streamline operations, manage resources effectively, and grow your business with BRM tools.
+                        Analyze financial data, compare industry peers, and forecast with precision—all in one powerful, intuitive platform
                         </p>
                         <NavLink to='/auth/signin'><button className={`${styles.btn} btn-lg mt-3`}>Get Started</button></NavLink>
                     </div>

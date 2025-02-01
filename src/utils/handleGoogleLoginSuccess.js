@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import { toast } from "react-toastify";
 import Cookies from "js-cookie"
 import axios from "axios"

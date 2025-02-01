@@ -104,7 +104,7 @@ p {
 
     .accordion-header {
       .accordion-button {
-        background-color: #ff993350;
+        background-color: #00214750;
         color: #333;
         font-size: 1.2rem;
         font-weight: bold;
@@ -117,13 +117,13 @@ p {
         }
 
         &:not(.collapsed) {
-          background-color: #ff993350;
+          background-color: #00214750;
           color: #333;
         }
 
         i {
           font-size: 1.3rem;
-          color: #FF9933;
+          color: #002147;
         }
       }
     }

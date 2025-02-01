@@ -7,33 +7,33 @@ const HowItWorks = () => {
     const steps = [
         {
           stepNumber: "1",
-          title: "Sign Up",
+          title: "Sign Up & Connect",
           description:
-            "Create an account to access the powerful tools of BRM. During the signup process, you will provide essential information about your business, such as its name, size, and primary focus. This step ensures your business profile is tailored to your specific needs, enabling a personalized experience from the start.",
+            "Create an account and link your institution to access financial data.",
         },
         {
           stepNumber: "2",
-          title: "Add Details",
+          title: "Analyze & Compare",
           description:
-            "Once your account is set up, populate the system with critical data. Add employees, define their roles, and assign responsibilities. Include assets such as equipment, vehicles, and stock inventory. This data helps you centralize your operations and provides a strong foundation for efficient management.",
+            "View reports, compare with peers, and explore key financial insights.",
         },
         {
           stepNumber: "3",
-          title: "Manage Resources",
+          title: "Forecast & Plan",
           description:
-            "With all the details in place, use BRM to monitor and manage your resources effortlessly. Track employee performance, monitor stock levels to avoid shortages, and oversee asset utilization. Gain valuable insights through reports and analytics, allowing you to make informed decisions that drive your business forward.",
+            "Generate future projections and run liquidity stress tests with ease.",
         },
       ];
       
     return (
         <div className={styles.howItWorksSection} id="works">
-            <div className="container">
+            <div className="container mt-5">
                 <h2 className={`${styles.sectionTitle} text-center mb-5`}>How It Works</h2>
                 {steps.map((step, index) => (
                     <div className={`${styles.stepRow} row mb-md-5 mb-3`} key={index}>
                         <div className="col-md-1">
                             <div className={styles.stepNumber}>
-                                <h3 >{step.stepNumber}</h3>
+                                <h3 className="text-white">{step.stepNumber}</h3>
                             </div>
                         </div>
                         <div className="col-md-11">

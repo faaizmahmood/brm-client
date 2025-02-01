@@ -37,7 +37,7 @@
 
         span {
             font-size: 30px;
-            color: #FF9933;
+            color: #002147;
         }
     }
 
@@ -56,14 +56,14 @@
         cursor: pointer;
         font-size: 1rem;
         padding: 5px 20px;
-        background-color: #FF9933;
+        background-color: #002147;
         border: none;
         outline: none;
         border-radius: 5px;
         color: white;
 
         &:hover {
-            background-color: #FF9933;
+            background-color: #002147;
             transform: scale(1.05);
             transition: all 0.3s ease;
         }
@@ -72,7 +72,7 @@
 
 .popularBadge {
     position: absolute;
-    background-color: #FF9933;
+    background-color: #002147;
     color: white;
     top: -15px;
     left: 50%;
@@ -87,7 +87,7 @@
         content: "";
         position: absolute;
         transform: rotate(45deg);
-        border: 10px solid #FF9933;
+        border: 10px solid #002147;
     }
 
     &::before {

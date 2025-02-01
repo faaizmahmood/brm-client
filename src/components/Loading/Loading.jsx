@@ -9,9 +9,9 @@ const Loading = () => {
     return (
         <div className={`${styles.loading}`}>
             <h4 className='mb-3'>
-            Biz Resource Management - BRM
+            CU Analysis
             </h4>
-            <ScaleLoader color="#FF9933" />
+            <ScaleLoader color="#002147" />
         </div>
     );
 };

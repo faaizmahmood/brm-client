@@ -11,13 +11,14 @@
 
 
     .stepNumber {
-        background-color: #FF9933;
+        background-color: #002147;
         padding: 17px 10px;
         text-align: center;
         border-radius: 50%;
 
         h4 {
             font-size: 34px;
+            color: white !important;
         }
 
         @media (max-width: 768px) {

@@ -28,7 +28,8 @@ const Header = () => {
         <div className='row align-items-center'>
           <div className='col-4'>
             
-            <NavLink to="/"><img src={logo}/></NavLink>
+            {/* <NavLink to="/"><img src={logo}/></NavLink> */}
+            <h3>CU Analysis</h3>
           </div>
           <div className='col-4'>
             {/* <nav>

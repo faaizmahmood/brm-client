@@ -44,50 +44,38 @@ const Layout = () => {
             {/* Sidebar for Authenticated Users */}
             <div className="sidebar-container">
                 <Sidebar collapsed={collapsed}>
-                    <div className="sidebar-header d-flex align-items-center">
+                    <div className="sidebar-header d-flex align-items-center" style={{background:'#002147'}}>
                         <button className="sidebar-toggle" onClick={() => setCollapsed(!collapsed)}>
                             <FaBars />
                         </button>
-                        <h2>{collapsed ? "" : "BRM"}</h2>
+                        <h5>{collapsed ? "" : "CU Analysis"}</h5>
                     </div>
 
                     {/* Navigation Menu */}
                     <Menu className="mt-3">
                         <MenuItem
-                            icon={<i className="fas fa-home"></i>}
+                            icon={<i className="fas fa-home" style={{color:'#002147'}}></i>}
                             component={<NavLink to="/" />}
                         >
-                            Dashboard
+                            Financial Summary
                         </MenuItem>
                         <MenuItem
-                            icon={<i className="fas fa-user-tie"></i>}
-                            component={<NavLink to="/hrm" />}
+                            icon={<i className="fas fa-user-tie" style={{color:'#002147'}}></i>}
+                            component={<NavLink to="/peer-analysis" />}
                         >
-                            HRM
+                            Peer Analysis
                         </MenuItem>
                         <MenuItem
-                            icon={<i className="fas fa-box"></i>}
-                            component={<NavLink to="/stock-management" />}
+                            icon={<i className="fas fa-box" style={{color:'#002147'}}></i>}
+                            component={<NavLink to="/forecasting" />}
                         >
-                            Stock Management
+                            Forecasting
                         </MenuItem>
                         <MenuItem
-                            icon={<i className="fas fa-calendar"></i>}
-                            component={<NavLink to="/projects-management" />}
+                            icon={<i className="fas fa-calendar" style={{color:'#002147'}}></i>}
+                            component={<NavLink to="/liquidity-stress-testing" />}
                         >
-                            Projects Management
-                        </MenuItem>
-                        <MenuItem
-                            icon={<i className="fas fa-file-alt"></i>}
-                            component={<NavLink to="/assets-management" />}
-                        >
-                            Assets Management
-                        </MenuItem>
-                        <MenuItem
-                            icon={<i className="fas fa-money-bill-alt"></i>}
-                            component={<NavLink to="/finance-management" />}
-                        >
-                            Finance Management
+                            Liquidity Stress Testing
                         </MenuItem>
                     </Menu>
                 </Sidebar>

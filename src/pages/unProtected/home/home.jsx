@@ -21,9 +21,9 @@ const Home = () => {
 
             <HeroSection />
             <AboutUs />
-            <KeyFeatures/>
+            {/* <KeyFeatures/> */}
             <HowItWorks/>
-            <PricingTable/>
+            {/* <PricingTable/> */}
             <FAQs/>
 
         </section>

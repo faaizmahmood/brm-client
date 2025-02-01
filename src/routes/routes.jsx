@@ -55,49 +55,32 @@ function AppRoutes() {
 
                     {/* Protected Routes */}
                     <Route
-                        path="/hrm"
+                        path="/peer-analysis"
                         element={
                             <ProtectedRoutes allowedRoles={['admin', 'user']}>
-                                <h1>HRM Page is here</h1>
+                                <h1>Peer Analysis Page is here</h1>
                             </ProtectedRoutes>
                         }
                     />
 
                     <Route
-                        path="/stock-management"
+                        path="/forecasting"
                         element={
                             <ProtectedRoutes allowedRoles={['admin', 'user']}>
-                                <h1>stock-management is page is here</h1>
+                                <h1>Forecasting page is here</h1>
                             </ProtectedRoutes>
                         }
                     />
 
                     <Route
-                        path="/projects-management"
+                        path="/liquidity-stress-testing"
                         element={
                             <ProtectedRoutes allowedRoles={['admin', 'user']}>
-                                <h1>projects-management is here</h1>
+                                <h1>Liquidity Stress Testing is here</h1>
                             </ProtectedRoutes>
                         }
                     />
 
-                    <Route
-                        path="/assets-management"
-                        element={
-                            <ProtectedRoutes allowedRoles={['admin', 'user']}>
-                                <h1>assets-management page is here</h1>
-                            </ProtectedRoutes>
-                        }
-                    />
-
-                    <Route
-                        path="/finance-management"
-                        element={
-                            <ProtectedRoutes allowedRoles={['admin', 'user']}>
-                                <h1>finance-management page is here</h1>
-                            </ProtectedRoutes>
-                        }
-                    />
 
                     {/* Catch-All Route for 404 */}
                     <Route

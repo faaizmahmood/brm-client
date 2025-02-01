@@ -1,3 +1,4 @@
+/* eslint-disable no-empty-pattern */
 /* eslint-disable no-unused-vars */
 import React, { useEffect } from 'react';
 import styles from './dashboard.module.scss';
@@ -15,7 +16,7 @@ const Dashboard = () => {
 
 
             <section className={`${styles.dashboard}`}>
-                <h1>Dashboard page is here</h1>
+                <h1>Financial Summary page is here</h1>
             </section>
 
 

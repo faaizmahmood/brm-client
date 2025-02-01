@@ -15,6 +15,11 @@
         }
     }
 
+    h3{
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        color: #002147;
+    }
+
     h4 {
         font-size: 20px;
         font-weight: 400;
@@ -82,7 +87,7 @@
 
         button {
             padding: 5px 20px;
-            background-color: #FF9933;
+            background-color: #002147;
             border: none;
             outline: none;
             border-radius: 5px;
@@ -91,8 +96,8 @@
 
         .child_2{
             background-color: transparent !important;
-            border: 1px solid #FF9933 !important;
-            color: #FF9933 !important;
+            border: 1px solid #002147 !important;
+            color: #002147 !important;
         }
     }
 
