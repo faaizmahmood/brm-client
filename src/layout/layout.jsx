@@ -6,6 +6,7 @@ import AppRoutes from "../routes/routes";
 import { Sidebar, Menu, MenuItem } from 'react-pro-sidebar';
 import { useState } from "react";
 import { FaBars } from 'react-icons/fa';
+import styles from './layout.module.scss'
 
 // PublicLayout (Example for unauthenticated users)
 const PublicLayout = () => (
@@ -42,38 +43,48 @@ const Layout = () => {
     return (
         <>
             {/* Sidebar for Authenticated Users */}
-            <div className="sidebar-container">
-                <Sidebar collapsed={collapsed}>
-                    <div className="sidebar-header d-flex align-items-center" style={{background:'#002147'}}>
+            <div className="sidebar-container" style={{background:'#002147'}}>
+                <Sidebar collapsed={collapsed} >
+                    <div className="sidebar-header d-flex align-items-center pb-4" style={{background:'#002147'}}>
                         <button className="sidebar-toggle" onClick={() => setCollapsed(!collapsed)}>
                             <FaBars />
                         </button>
                         <h5>{collapsed ? "" : "CU Analysis"}</h5>
                     </div>
 
+                    <hr/>
+
                     {/* Navigation Menu */}
-                    <Menu className="mt-3">
+                    <Menu className="pt-4" style={{background:'#002147'}}>
                         <MenuItem
-                            icon={<i className="fas fa-home" style={{color:'#002147'}}></i>}
+                            icon={<i className="fas fa-home" style={{color:'#BD9434'}}></i>}
                             component={<NavLink to="/" />}
+                            style={{color:'white'}}
+                            className={`${styles.navItem} mt-2`}
                         >
                             Financial Summary
                         </MenuItem>
                         <MenuItem
-                            icon={<i className="fas fa-user-tie" style={{color:'#002147'}}></i>}
+                            icon={<i className="fas fa-user-tie" style={{color:'#BD9434'}}></i>}
                             component={<NavLink to="/peer-analysis" />}
+                            style={{color:'white'}}
+                            className="mt-2"
                         >
                             Peer Analysis
                         </MenuItem>
                         <MenuItem
-                            icon={<i className="fas fa-box" style={{color:'#002147'}}></i>}
+                            icon={<i className="fas fa-box" style={{color:'#BD9434'}}></i>}
                             component={<NavLink to="/forecasting" />}
+                            style={{color:'white'}}
+                            className="mt-2"
                         >
                             Forecasting
                         </MenuItem>
                         <MenuItem
-                            icon={<i className="fas fa-calendar" style={{color:'#002147'}}></i>}
+                            icon={<i className="fas fa-calendar" style={{color:'#BD9434'}}></i>}
                             component={<NavLink to="/liquidity-stress-testing" />}
+                            style={{color:'white'}}
+                            className="mt-2" 
                         >
                             Liquidity Stress Testing
                         </MenuItem>

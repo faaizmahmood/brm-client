@@ -16,7 +16,9 @@ const Dashboard = () => {
 
 
             <section className={`${styles.dashboard}`}>
-                <h1>Financial Summary page is here</h1>
+                <h1>Financial Dashboard</h1>
+
+                <p>Home {">"} Dashboard</p>
             </section>
 
 
