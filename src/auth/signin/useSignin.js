@@ -1,83 +1,59 @@
 /* eslint-disable no-unused-vars */
-import axios from "axios"
-import { useFormik } from "formik"
-import { useLocation, useNavigate } from "react-router-dom"
-import { toast } from "react-toastify"
-import * as Yup from 'yup'
-import Cookies from "js-cookie"
+import axios from "axios";
+import { useFormik } from "formik";
+import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+import * as Yup from "yup";
 
 const useSignin = () => {
-
-    const navigate = useNavigate()
-
-    // const location = useLocation()
-
-    // if(location.pathname)
-
+    const navigate = useNavigate();
 
     const initialValues = {
         email: '',
         password: '',
-    }
+    };
 
     const validationSchema = Yup.object({
         email: Yup.string().required("Email is required").email("Invalid email format"),
         password: Yup.string().required("Password is required").min(6, "Password must be at least 6 characters"),
-    })
+    });
 
     const formik = useFormik({
         initialValues,
         validationSchema,
         onSubmit: async (values) => {
-
-            const signupPromise = axios.post('https://brm-server-a9fe47f057bd.herokuapp.com/api/auth/signin', values)
-
-            // Show success toast if signup succeeds
-            toast.promise(signupPromise, {
-                pending: 'Signing in... Please wait ⏳',
-                success: 'Signin successful! 🎉',
-                error: {
-                    render({ data }) {
-                        const status = data?.response?.status;
-                        if (status === 404) {
-                            return 'User not found.';
-                        }
-                        if (status === 401) {
-                            return 'Password is incorrect.';
-                        }
-
-                        return 'An unexpected error occurred. Please try again.';
-                    }
-                }
-            })
-
             try {
+                // Send sign-in request
+                const response = await axios.post('http://127.0.0.1:8000/auth/signin', values);
+                
+                // Extract user data
+                const { message, user } = response.data;
 
-                const response = await signupPromise
+                // Store user data in localStorage
+                localStorage.setItem("user", JSON.stringify(user));
 
-                const { user } = response.data;
+                // Show success message
+                toast.success("Signin successful! 🎉");
 
-                Cookies.set('authToken', user, { expires: 7 })
-
-
-                formik.resetForm()
-
-                navigate('/')
-
+                // Reset form & redirect user
+                formik.resetForm();
+                navigate("/");
+                
             } catch (error) {
-                // Display error toast based on the error type
-                if (error.response?.status === 400) {
-                    toast.error("Email already in use")
+                const status = error.response?.status;
+
+                if (status === 404) {
+                    toast.error("User not found.");
+                } else if (status === 401) {
+                    toast.error("Incorrect password.");
                 } else {
-                    toast.error("An unexpected error occurred. Please try again.")
+                    toast.error("An unexpected error occurred.");
                 }
             }
         },
-    })
+    });
 
-    return {
-        formik,
-    }
-}
+    return { formik };
+};
 
-export default useSignin
+export default useSignin;

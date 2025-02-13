@@ -1,29 +1,18 @@
-import { ToastContainer } from "react-toastify"
-import { useDispatch } from "react-redux"
-import { useEffect } from "react"
-import Cookies from "js-cookie"
-import { fetchUserProfile } from "./store/slices/userSlice"
-import Layout from "./layout/layout"
-// import AppRoutes from "./routes/routes"
-
-
+import { ToastContainer } from "react-toastify";
+import { useDispatch } from "react-redux";
+import { useEffect } from "react";
+import { loadUserProfile } from "./store/slices/userSlice"; // Updated import
+import Layout from "./layout/layout";
 
 const App = () => {
-
-    const dispatch = useDispatch()
-
+    const dispatch = useDispatch();
 
     useEffect(() => {
-
-        if (Cookies.get('authToken')) {
-            dispatch(fetchUserProfile())
-        }
-
-    }, [dispatch])
+            dispatch(loadUserProfile()); // Fetch user data from localStorage
+    }, [dispatch]);
 
     return (
         <>
-
             <Layout />
 
             <ToastContainer
@@ -39,7 +28,7 @@ const App = () => {
                 theme="light"
             />
         </>
-    )
-}
+    );
+};
 
-export default App
+export default App;

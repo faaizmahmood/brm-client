@@ -1,5 +1,4 @@
 import { matchPath, useLocation, NavLink } from "react-router-dom";
-import Cookies from "js-cookie";
 import Header from "../pages/protected/header/header";
 import Footer from "../pages/protected/footer/footer";
 import AppRoutes from "../routes/routes";
@@ -27,8 +26,9 @@ const PublicLayout = () => (
 const Layout = () => {
     const [collapsed, setCollapsed] = useState(false);
     const location = useLocation();
-    const authToken = Cookies.get("authToken");
-    const isLoggedIn = authToken ? true : false;
+
+    const user = localStorage.getItem('user');
+    const isLoggedIn = !!user; // Converts to boolean
 
     const routesWithoutHeaderFooter = ["/u/:shortURL", "/auth/signin", "/auth/signup"];
     const shouldShowHeaderFooter = !routesWithoutHeaderFooter.some((route) =>
@@ -43,48 +43,48 @@ const Layout = () => {
     return (
         <>
             {/* Sidebar for Authenticated Users */}
-            <div className="sidebar-container" style={{background:'#002147'}}>
+            <div className="sidebar-container" style={{ background: '#002147' }}>
                 <Sidebar collapsed={collapsed} >
-                    <div className="sidebar-header d-flex align-items-center pb-4" style={{background:'#002147'}}>
+                    <div className="sidebar-header d-flex align-items-center pb-4" style={{ background: '#002147' }}>
                         <button className="sidebar-toggle" onClick={() => setCollapsed(!collapsed)}>
                             <FaBars />
                         </button>
                         <h5>{collapsed ? "" : "CU Analysis"}</h5>
                     </div>
 
-                    <hr/>
+                    <hr />
 
                     {/* Navigation Menu */}
-                    <Menu className="pt-4" style={{background:'#002147'}}>
+                    <Menu className="pt-4" style={{ background: '#002147' }}>
                         <MenuItem
-                            icon={<i className="fas fa-home" style={{color:'#BD9434'}}></i>}
+                            icon={<i className="fas fa-home" style={{ color: '#BD9434' }}></i>}
                             component={<NavLink to="/" />}
-                            style={{color:'white'}}
+                            style={{ color: 'white' }}
                             className={`${styles.navItem} mt-2`}
                         >
                             Financial Summary
                         </MenuItem>
                         <MenuItem
-                            icon={<i className="fas fa-user-tie" style={{color:'#BD9434'}}></i>}
+                            icon={<i className="fas fa-user-tie" style={{ color: '#BD9434' }}></i>}
                             component={<NavLink to="/peer-analysis" />}
-                            style={{color:'white'}}
+                            style={{ color: 'white' }}
                             className="mt-2"
                         >
                             Peer Analysis
                         </MenuItem>
                         <MenuItem
-                            icon={<i className="fas fa-box" style={{color:'#BD9434'}}></i>}
+                            icon={<i className="fas fa-box" style={{ color: '#BD9434' }}></i>}
                             component={<NavLink to="/forecasting" />}
-                            style={{color:'white'}}
+                            style={{ color: 'white' }}
                             className="mt-2"
                         >
                             Forecasting
                         </MenuItem>
                         <MenuItem
-                            icon={<i className="fas fa-calendar" style={{color:'#BD9434'}}></i>}
+                            icon={<i className="fas fa-calendar" style={{ color: '#BD9434' }}></i>}
                             component={<NavLink to="/liquidity-stress-testing" />}
-                            style={{color:'white'}}
-                            className="mt-2" 
+                            style={{ color: 'white' }}
+                            className="mt-2"
                         >
                             Liquidity Stress Testing
                         </MenuItem>
@@ -96,7 +96,7 @@ const Layout = () => {
             <div
                 className="main-content"
                 style={{
-                    marginLeft: collapsed ? "80px" : "250px", background:'#EFF1F3', minHeight:'100vh'
+                    marginLeft: collapsed ? "80px" : "250px", background: '#EFF1F3', minHeight: '100vh'
                 }}
             >
                 {/* Header */}

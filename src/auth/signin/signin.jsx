@@ -1,7 +1,7 @@
 import styles from "./signin.module.scss";
 import useSignin from "./useSignin.js";
-import { GoogleLogin } from "@react-oauth/google";
-import handleGoogleLoginSuccess from "../../utils/handleGoogleLoginSuccess.js";
+
+
 
 const Signin = () => {
     const { formik, user, isAuthenticated } = useSignin();
@@ -48,17 +48,6 @@ const Signin = () => {
                                     Sign In
                                 </button>
                             </form>
-
-                            <div className="oauth-login mt-4">
-
-                                <div className={`${styles.divider}`}>Or Sign In Using</div>
-
-                                {/* Google OAuth Button */}
-                                <GoogleLogin
-                                    onSuccess={handleGoogleLoginSuccess}
-                                    onError={(error) => console.log("OAuth Error:", error)}
-                                />
-                            </div>
 
                         </>
                     )}

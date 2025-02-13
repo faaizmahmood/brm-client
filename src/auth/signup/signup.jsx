@@ -1,7 +1,6 @@
-import { GoogleLogin } from '@react-oauth/google'
+
 import styles from './signup.module.scss'
 import useSignup from './useSignup'
-import handleGoogleLoginSuccess from '../../utils/handleGoogleLoginSuccess'
 
 const Signup = () => {
 
@@ -52,16 +51,6 @@ const Signup = () => {
 
                         <button className='mt-4' type='submit'>Sign Up</button>
 
-                        <div className="oauth-login mt-4">
-
-                            <div className={`${styles.divider}`}>Or Sign Up Using</div>
-
-                            {/* Google OAuth Button */}
-                            <GoogleLogin
-                                onSuccess={handleGoogleLoginSuccess}
-                                onError={(error) => console.log("OAuth Error:", error)}
-                            />
-                        </div>
 
 
                     </form>

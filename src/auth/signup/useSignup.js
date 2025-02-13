@@ -26,7 +26,7 @@ const useSignup = () => {
         validationSchema,
         onSubmit: async (values) => {
 
-            const signupPromise = axios.post('https://brm-server-a9fe47f057bd.herokuapp.com/api/auth/signup', values)
+            const signupPromise = axios.post('http://127.0.0.1:8000/auth/signup', values)
 
             // Show success toast if signup succeeds
             toast.promise(signupPromise, {
@@ -39,7 +39,7 @@ const useSignup = () => {
                             return 'Email already in use';
                         }
 
-                        return 'An unexpected error occurred. Please try again.';
+                        return 'An unexpected error occurred.';
                     }
                 }
             })
@@ -58,7 +58,7 @@ const useSignup = () => {
                 if (error.response?.status === 400) {
                     toast.error("Email already in use")
                 } else {
-                    toast.error("An unexpected error occurred. Please try again.")
+                    toast.error("An unexpected error occurred.")
                 }
             }
         },

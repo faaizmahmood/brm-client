@@ -1,13 +1,10 @@
 /* eslint-disable react/prop-types */
 import { Navigate } from 'react-router-dom';
 
-import Cookies from 'js-cookie';
 
 
-const authToken = Cookies.get('authToken')
-
-
-const isLoggedIn = authToken ? true : false;
+const user = localStorage.getItem('user');
+const isLoggedIn = !!user; // Converts to boolean
 
 const ProtectedRoutes = ({ children, allowedRoles }) => {
 

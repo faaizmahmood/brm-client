@@ -11,13 +11,15 @@ const Header = () => {
   const { profile } = useSelector((state) => state.user)
   const [dropdownVisible, setDropdownVisible] = useState(false)
   const navigate = useNavigate()
-  const authToken = Cookies.get("authToken");
-  const isLoggedIn = authToken ? true : false;
+
+  const user = localStorage.getItem('user');
+  const isLoggedIn = !!user; // Converts to boolean
 
   // Function to handle logout
   const handleLogout = () => {
     // Delete the auth token cookie (assuming it's named "authToken")
-    Cookies.remove('authToken')
+    localStorage.removeItem('user');
+
     window.location.reload()
     navigate("/auth/signin")
   }
@@ -27,7 +29,7 @@ const Header = () => {
       <div className='container'>
         <div className='row align-items-center'>
           <div className='col-4'>
-            
+
             {/* <NavLink to="/"><img src={logo}/></NavLink> */}
             <h3>CU Analysis</h3>
           </div>
@@ -48,7 +50,7 @@ const Header = () => {
                     style={{ textTransform: 'capitalize', cursor: 'pointer' }}
                     onClick={() => setDropdownVisible(!dropdownVisible)}
                   >
-                    {profile?.user?.name} <i className="fa-sharp fa-solid fa-caret-down"></i>
+                    {profile?.name} <i className="fa-sharp fa-solid fa-caret-down"></i>
                   </h5>
 
                   {/* Dropdown Menu */}
@@ -62,8 +64,8 @@ const Header = () => {
                 <>
                   <div className={`${styles.btn_group}`}>
 
-                  <NavLink to='/auth/signin'><button>SignIn</button></NavLink>
-                  <NavLink to='/auth/signup'><button className={`${styles.child_2}`}>SignUp</button></NavLink>
+                    <NavLink to='/auth/signin'><button>SignIn</button></NavLink>
+                    <NavLink to='/auth/signup'><button className={`${styles.child_2}`}>SignUp</button></NavLink>
 
                   </div>
                 </>

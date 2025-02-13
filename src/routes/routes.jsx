@@ -1,6 +1,5 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
 import ProtectedRoutes from './protectedRoutes';
-import Cookies from 'js-cookie';
 import React, { Suspense } from 'react';
 
 // Delay utility function
@@ -24,8 +23,8 @@ import Loading from '../components/Loading/Loading';
 import { useSelector } from 'react-redux';
 import Error from '../components/Error/Error';
 
-const authToken = Cookies.get('authToken');
-const isLoggedIn = authToken ? true : false;
+const user = localStorage.getItem('user');
+const isLoggedIn = !!user; // Converts to boolean
 
 function AppRoutes() {
     const { profile } = useSelector((state) => state.user);
