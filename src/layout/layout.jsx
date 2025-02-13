@@ -96,7 +96,7 @@ const Layout = () => {
             <div
                 className="main-content"
                 style={{
-                    marginLeft: collapsed ? "80px" : "250px",
+                    marginLeft: collapsed ? "80px" : "250px", background:'#EFF1F3', minHeight:'100vh'
                 }}
             >
                 {/* Header */}

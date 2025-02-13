@@ -1,4 +1,149 @@
 .dashboard {
 
-  
+    h1 {
+        font-size: 20px;
+    }
+
+    h6 {
+        font-weight: 400;
+        font-size: 14px;
+    }
+
+    h3 {
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+
+
+
+    .cards {
+
+        .dashboard_card {
+            background-color: white;
+            min-height: 100px;
+            padding: 10px 15px;
+        }
+
+
+        .left_bottom_card {
+            background-color: white;
+            min-height: 400px;
+            padding: 20px;
+        }
+
+        i {
+            font-size: 24px;
+            padding: 15px 12px;
+            // background-color: red;
+            border-radius: 50%;
+        }
+
+
+        .studentRatio {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+
+            .ratioBar {
+                width: 50px !important;
+                // height: 10px;
+                padding: 3px;
+                // background-color: #4571FF;
+            }
+
+            p {
+                font-size: 12px;
+            }
+
+            h6 {
+                font-size: 14px;
+                font-weight: bold;
+            }
+        }
+
+    }
+
+
+    .bottom_row {
+
+        .bottom_col {
+            background-color: rgb(255, 255, 255);
+            min-height: 100px;
+            padding: 20px;
+        }
+
+
+        .event_calender {
+
+            
+
+            h4 {
+                font-size: 16px;
+                font-weight: 600;
+                margin-bottom: 20px;
+            }
+
+            .custom_calendar {
+                border: none;
+                font-size: 14px;
+            }
+
+            .react-calendar__tile {
+                border-radius: 5px;
+                transition: 0.2s;
+            }
+
+            .react-calendar__tile:enabled:hover {
+                background: #f0f0f0;
+            }
+
+            .react-calendar__tile--active {
+                background: #4caf50;
+                color: white;
+            }
+
+        }
+
+
+        .unique_visitor {
+
+            p {
+
+                span {
+                    font-size: 13px !important;
+                }
+            }
+        }
+
+
+        .notice_board {
+
+            .date {
+                background-color: #43E3CE;
+                padding: 5px 10px;
+                border-radius: 20px;
+                width: fit-content;
+                color: white;
+                font-size: 12px;
+            }
+
+
+            h5 {
+                margin-top: 10px !important;
+                font-size: 18px;
+            }
+
+            p {
+                margin-top: 10px !important;
+
+                span {
+                    font-size: 10px !important;
+                }
+            }
+        }
+    }
+
+
 }

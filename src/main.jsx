@@ -7,6 +7,7 @@ import { BrowserRouter } from 'react-router-dom'
 import { store } from './store/store';
 import { GoogleOAuthProvider } from '@react-oauth/google';
 // import "react-pro-sidebar/dist/css/styles.css";
+import "react-calendar/dist/Calendar.css";
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
